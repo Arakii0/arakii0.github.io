@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav id="navbar">
+            <div class="logo">
+                <a href="../index.html">CyberSec<span>Portfolio</span></a>
+            </div>
+            <div class="nav-toggle">
+                <span class="hamburger"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="achievements.html" class="nav-link">Achievements</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Certifications</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="school-certifications.html">School Certifications</a></li>
+                        <li><a href="industry-certifications.html">Industry Certifications</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="nav-link contact-btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Projects</h1>
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> / <span>Projects</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Filters Section -->
+        <section class="project-filters-section">
+            <div class="container">
+                <div class="project-filters">
+                    <button class="project-filter active" data-filter="all">All Projects</button>
+                    <button class="project-filter" data-filter="offensive">Offensive Security</button>
+                    <button class="project-filter" data-filter="defensive">Defensive Security</button>
+                    <button class="project-filter" data-filter="cloud">Cloud Security</button>
+                    <button class="project-filter" data-filter="tool">Security Tools</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid Section -->
+        <section class="projects-section">
+            <div class="container">
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card offensive" id="project1">
+                        <div class="project-img">
+                            <div class="project-img-placeholder">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Network Vulnerability Scanner</h3>
+                            <p>A custom-built vulnerability scanner that identifies security weaknesses in network infrastructure. This tool performs comprehensive scans to detect misconfigurations, outdated software, and potential entry points for attackers.</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Network Security</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn secondary-btn small-btn">Demo</a>
+                                <a href="#" class="btn secondary-btn small-btn">GitHub</a>
+                                <button class="btn primary-btn small-btn project-details-btn" data-project="project1">Details</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Details Modal Content (Hidden) -->
+                        <div class="project-details-content" id="project1-details">
+                            <h2>Network Vulnerability Scanner</h2>
+                            <div class="project-details-info">
+                                <div class="project-details-section">
+                                    <h3>Project Overview</h3>
+                                    <p>A comprehensive network vulnerability scanner designed to identify security weaknesses in network infrastructure. This tool automates the process of discovering hosts, scanning for open ports, identifying services, and detecting vulnerabilities.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Key Features</h3>
+                                    <ul>
+                                        <li>Automated network discovery and mapping</li>
+                                        <li>Port scanning with service identification</li>
+                                        <li>Vulnerability detection based on service versions</li>
+                                        <li>Customizable scanning profiles</li>
+                                        <li>Detailed reporting with remediation recommendations</li>
+                                        <li>Low-bandwidth mode for sensitive environments</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Technologies Used</h3>
+                                    <ul>
+                                        <li>Python for core functionality</li>
+                                        <li>Scapy for packet manipulation</li>
+                                        <li>SQLite for vulnerability database</li>
+                                        <li>Flask for web interface</li>
+                                        <li>Docker for containerization</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Challenges & Solutions</h3>
+                                    <p>One of the main challenges was balancing scan thoroughness with network impact. I implemented adaptive scanning techniques that adjust the scan intensity based on network conditions and target system responses, ensuring comprehensive results without overwhelming the network.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Results & Impact</h3>
+                                    <p>The scanner successfully identified critical vulnerabilities in test environments that were missed by commercial solutions. It has been used to secure multiple network infrastructures and has become part of regular security assessment procedures.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card defensive" id="project2">
+                        <div class="project-img">
+                            <div class="project-img-placeholder">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Security Operations Dashboard</h3>
+                            <p>A real-time security monitoring dashboard for visualizing and responding to security events. This tool aggregates data from multiple security sources to provide a comprehensive view of the security posture.</p>
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Data Visualization</span>
+                                <span class="tag">SIEM</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn secondary-btn small-btn">Demo</a>
+                                <a href="#" class="btn secondary-btn small-btn">GitHub</a>
+                                <button class="btn primary-btn small-btn project-details-btn" data-project="project2">Details</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Details Modal Content (Hidden) -->
+                        <div class="project-details-content" id="project2-details">
+                            <h2>Security Operations Dashboard</h2>
+                            <div class="project-details-info">
+                                <div class="project-details-section">
+                                    <h3>Project Overview</h3>
+                                    <p>A comprehensive security operations dashboard that provides real-time visibility into security events across an organization's infrastructure. The dashboard integrates with various security tools to aggregate data and present actionable insights.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Key Features</h3>
+                                    <ul>
+                                        <li>Real-time event monitoring and alerting</li>
+                                        <li>Interactive data visualizations</li>
+                                        <li>Threat intelligence integration</li>
+                                        <li>Incident response workflow management</li>
+                                        <li>Customizable dashboards for different security roles</li>
+                                        <li>Historical data analysis and trend identification</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Technologies Used</h3>
+                                    <ul>
+                                        <li>JavaScript and React for frontend</li>
+                                        <li>Node.js for backend services</li>
+                                        <li>D3.js for data visualization</li>
+                                        <li>Elasticsearch for data storage and querying</li>
+                                        <li>Kafka for event streaming</li>
+                                        <li>Docker and Kubernetes for deployment</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Challenges & Solutions</h3>
+                                    <p>The main challenge was processing and visualizing large volumes of security data in real-time without performance degradation. I implemented a tiered data processing architecture with in-memory caching and data aggregation to maintain responsiveness even under high event volumes.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Results & Impact</h3>
+                                    <p>The dashboard reduced average incident response time by 60% by providing security analysts with immediate visibility into security events and streamlined response workflows. It has become an essential tool for the security operations team.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card offensive tool" id="project3">
+                        <div class="project-img">
+                            <div class="project-img-placeholder">
+                                <i class="fas fa-bug"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Web Application Penetration Testing Framework</h3>
+                            <p>A comprehensive framework for identifying and exploiting web application vulnerabilities. This tool automates the process of discovering and testing for common web vulnerabilities.</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Web Security</span>
+                                <span class="tag">OWASP Top 10</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn secondary-btn small-btn">Demo</a>
+                                <a href="#" class="btn secondary-btn small-btn">GitHub</a>
+                                <button class="btn primary-btn small-btn project-details-btn" data-project="project3">Details</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Details Modal Content (Hidden) -->
+                        <div class="project-details-content" id="project3-details">
+                            <h2>Web Application Penetration Testing Framework</h2>
+                            <div class="project-details-info">
+                                <div class="project-details-section">
+                                    <h3>Project Overview</h3>
+                                    <p>A modular framework designed to streamline and automate web application penetration testing. The framework provides a structured approach to discovering, exploiting, and reporting web vulnerabilities with a focus on the OWASP Top 10.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Key Features</h3>
+                                    <ul>
+                                        <li>Automated discovery of web application attack surface</li>
+                                        <li>Modular testing for OWASP Top 10 vulnerabilities</li>
+                                        <li>Custom payload generation for various attack vectors</li>
+                                        <li>Session management and authentication bypass testing</li>
+                                        <li>API security testing capabilities</li>
+                                        <li>Comprehensive reporting with evidence and remediation guidance</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Technologies Used</h3>
+                                    <ul>
+                                        <li>Python for core functionality</li>
+                                        <li>Selenium for browser automation</li>
+                                        <li>Beautiful Soup for HTML parsing</li>
+                                        <li>SQLAlchemy for database interactions</li>
+                                        <li>Flask for API endpoints</li>
+                                        <li>Docker for containerization</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Challenges & Solutions</h3>
+                                    <p>A significant challenge was developing detection mechanisms that minimize false positives while maintaining high detection rates. I implemented a multi-stage verification process that confirms vulnerabilities through different testing methodologies before reporting them.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Results & Impact</h3>
+                                    <p>The framework has been used to identify critical vulnerabilities in multiple web applications, including SQL injection, XSS, and authentication bypass issues. It has significantly reduced the time required for comprehensive web application security assessments.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="project-card cloud" id="project4">
+                        <div class="project-img">
+                            <div class="project-img-placeholder">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Cloud Security Assessment Tool</h3>
+                            <p>A tool for evaluating security configurations and compliance in cloud environments. This tool helps identify misconfigurations, insecure practices, and compliance violations in cloud deployments.</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Cloud Security</span>
+                                <span class="tag">AWS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn secondary-btn small-btn">Demo</a>
+                                <a href="#" class="btn secondary-btn small-btn">GitHub</a>
+                                <button class="btn primary-btn small-btn project-details-btn" data-project="project4">Details</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Details Modal Content (Hidden) -->
+                        <div class="project-details-content" id="project4-details">
+                            <h2>Cloud Security Assessment Tool</h2>
+                            <div class="project-details-info">
+                                <div class="project-details-section">
+                                    <h3>Project Overview</h3>
+                                    <p>A comprehensive tool designed to assess security configurations and compliance in cloud environments. The tool performs automated scans of cloud resources to identify misconfigurations, insecure practices, and compliance violations.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Key Features</h3>
+                                    <ul>
+                                        <li>Multi-cloud support (AWS, Azure, GCP)</li>
+                                        <li>Compliance checks for industry standards (CIS, NIST, PCI DSS)</li>
+                                        <li>IAM security assessment</li>
+                                        <li>Network security configuration analysis</li>
+                                        <li>Data protection and encryption verification</li>
+                                        <li>Remediation guidance with infrastructure-as-code templates</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Technologies Used</h3>
+                                    <ul>
+                                        <li>Python for core functionality</li>
+                                        <li>AWS SDK, Azure SDK, Google Cloud SDK</li>
+                                        <li>Terraform for remediation templates</li>
+                                        <li>PostgreSQL for findings database</li>
+                                        <li>React for web interface</li>
+                                        <li>Docker and Kubernetes for deployment</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Challenges & Solutions</h3>
+                                    <p>The main challenge was keeping pace with rapidly evolving cloud services and security best practices. I implemented a modular architecture with a rules engine that can be updated independently, allowing for quick adaptation to new cloud features and security recommendations.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Results & Impact</h3>
+                                    <p>The tool has helped organizations identify and remediate critical security issues in their cloud environments, including publicly exposed storage buckets, overly permissive security groups, and unencrypted sensitive data. It has become an integral part of cloud security programs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 5 -->
+                    <div class="project-card defensive tool" id="project5">
+                        <div class="project-img">
+                            <div class="project-img-placeholder">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Automated Incident Response System</h3>
+                            <p>An automated system for detecting and responding to security incidents. This tool uses predefined playbooks to automatically contain and mitigate security threats.</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Incident Response</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn secondary-btn small-btn">Demo</a>
+                                <a href="#" class="btn secondary-btn small-btn">GitHub</a>
+                                <button class="btn primary-btn small-btn project-details-btn" data-project="project5">Details</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Details Modal Content (Hidden) -->
+                        <div class="project-details-content" id="project5-details">
+                            <h2>Automated Incident Response System</h2>
+                            <div class="project-details-info">
+                                <div class="project-details-section">
+                                    <h3>Project Overview</h3>
+                                    <p>An intelligent system designed to automate the detection, analysis, and response to security incidents. The system uses predefined playbooks to execute response actions, reducing the time from detection to containment.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Key Features</h3>
+                                    <ul>
+                                        <li>Real-time security event monitoring and correlation</li>
+                                        <li>Automated threat intelligence enrichment</li>
+                                        <li>Customizable response playbooks</li>
+                                        <li>Automated containment actions</li>
+                                        <li>Integration with security tools and infrastructure</li>
+                                        <li>Case management and documentation</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Technologies Used</h3>
+                                    <ul>
+                                        <li>Python for core functionality</li>
+                                        <li>Elasticsearch for event storage</li>
+                                        <li>Redis for playbook orchestration</li>
+                                        <li>RabbitMQ for message queuing</li>
+                                        <li>Django for web interface</li>
+                                        <li>Docker for containerization</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Challenges & Solutions</h3>
+                                    <p>A critical challenge was ensuring that automated responses wouldn't cause unintended disruptions. I implemented a tiered response approach with progressive containment actions and built-in safety checks to prevent business-impacting actions without appropriate verification.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Results & Impact</h3>
+                                    <p>The system has reduced average incident response time from hours to minutes for common security incidents. It has successfully contained malware outbreaks, credential compromise attempts, and data exfiltration scenarios before they could cause significant damage.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 6 -->
+                    <div class="project-card offensive" id="project6">
+                        <div class="project-img">
+                            <div class="project-img-placeholder">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Mobile Application Security Scanner</h3>
+                            <p>A specialized tool for identifying security vulnerabilities in mobile applications. This scanner analyzes both Android and iOS applications for common security issues.</p>
+                            <div class="project-tags">
+                                <span class="tag">Java</span>
+                                <span class="tag">Mobile Security</span>
+                                <span class="tag">Static Analysis</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn secondary-btn small-btn">Paper</a>
+                                <a href="#" class="btn secondary-btn small-btn">GitHub</a>
+                                <button class="btn primary-btn small-btn project-details-btn" data-project="project6">Details</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Details Modal Content (Hidden) -->
+                        <div class="project-details-content" id="project6-details">
+                            <h2>Mobile Application Security Scanner</h2>
+                            <div class="project-details-info">
+                                <div class="project-details-section">
+                                    <h3>Project Overview</h3>
+                                    <p>A comprehensive security scanner designed specifically for mobile applications. The tool performs static and dynamic analysis of Android and iOS applications to identify security vulnerabilities, privacy issues, and coding flaws.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Key Features</h3>
+                                    <ul>
+                                        <li>Static code analysis for security vulnerabilities</li>
+                                        <li>Binary analysis of compiled applications</li>
+                                        <li>Third-party library security assessment</li>
+                                        <li>Data storage and transmission security checks</li>
+                                        <li>Permission and API usage analysis</li>
+                                        <li>Detailed reporting with risk ratings and remediation guidance</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Technologies Used</h3>
+                                    <ul>
+                                        <li>Java for Android analysis</li>
+                                        <li>Swift for iOS analysis</li>
+                                        <li>JADX for decompilation</li>
+                                        <li>Frida for dynamic analysis</li>
+                                        <li>SQLite for findings database</li>
+                                        <li>Spring Boot for web interface</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Challenges & Solutions</h3>
+                                    <p>A significant challenge was analyzing obfuscated code and detecting security issues in compiled applications. I implemented advanced pattern recognition techniques and behavioral analysis to identify security issues even in heavily obfuscated applications.</p>
+                                </div>
+                                
+                                <div class="project-details-section">
+                                    <h3>Results & Impact</h3>
+                                    <p>The scanner has identified critical vulnerabilities in numerous mobile applications, including insecure data storage, weak encryption implementations, and excessive permission usage. It has helped developers improve the security posture of their mobile applications before release.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Let's Work Together</h2>
+                    <p>Interested in collaborating on a cybersecurity project or need expertise for your organization? Get in touch today.</p>
+                    <a href="contact.html" class="btn primary-btn">Contact Me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="../index.html">CyberSec<span>Portfolio</span></a>
+                <p>Securing the digital world, one byte at a time.</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-links-column">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-column">
+                    <h3>More</h3>
+                    <ul>
+                        <li><a href="achievements.html">Achievements</a></li>
+                        <li><a href="school-certifications.html">School Certifications</a></li>
+                        <li><a href="industry-certifications.html">Industry Certifications</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-column">
+                    <h3>Connect</h3>
+                    <div class="footer-social">
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" aria-label="Medium"><i class="fab fa-medium"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year">2023</span> Your Name. All Rights Reserved.</p>
+            <a href="#" class="back-to-top">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Project Details Modal -->
+    <div class="modal" id="project-details-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

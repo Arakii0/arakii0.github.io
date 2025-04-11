@@ -1,110 +1,139 @@
-# Website Layout and Structure Design
+# Multi-Page Website Layout and Structure Design
 
 ## Overall Structure
-- Single-page application with smooth scrolling navigation
-- Fixed navigation bar at the top
-- Hero section with professional introduction
-- Sections arranged in logical flow for professional storytelling
-- Footer with contact information and social links
+- Multiple HTML pages with consistent navigation
+- Shared header and footer across all pages
+- Responsive design for all device sizes
+- Consistent styling and branding throughout
 
 ## Navigation
-- Home/Hero
-- About Me
-- Skills
-- Projects
-- Achievements
-- Certifications
-- Blog/Articles
-- Testimonials
-- Contact
+- Main navigation in header with links to all pages
+- Current page highlighting in navigation
+- Breadcrumb navigation for user orientation
+- Mobile-friendly navigation menu (hamburger for small screens)
 
-## Section Layouts
+## Page Layouts
 
-### Hero Section
-- Full-width background with cybersecurity-themed image or pattern
-- Name and professional title prominently displayed
-- Brief tagline highlighting expertise
-- Call-to-action button to most important section (Projects or Contact)
+### Home/Landing Page (index.html)
+- Hero section with professional introduction
+- Brief overview of skills and expertise
+- Featured projects showcase (3-4 highlighted projects)
+- Call-to-action buttons to key pages (Projects, Contact)
+- Social media links
 
-### About Me Section
+### About Me Page (pages/about.html)
 - Professional headshot (placeholder for user to add)
-- Two-column layout with image and text
-- Brief professional bio
-- Key skills highlights
+- Detailed professional bio
+- Education and background
+- Career highlights
+- Key skills overview
 - Download CV button
 
-### Skills Dashboard Section
-- Visual skill bars or radar chart
-- Organized by categories (Offensive Security, Defensive Security, etc.)
-- Icons for key technologies and tools
-- Interactive elements to show detailed descriptions
+### Skills Dashboard Page (pages/skills.html)
+- Skills categorized by type (Offensive, Defensive, Compliance, Technical)
+- Visual skill bars or charts showing proficiency
+- Tabbed interface for skill categories
+- Tools and technologies section with icons
+- Skill development timeline (optional)
 
-### Projects Section
-- Card-based grid layout
-- Filterable by technology/category
-- Each card includes:
+### Projects Page (pages/projects.html)
+- Project filtering system by category
+- Grid layout of project cards
+- Each project card includes:
   - Project title
   - Brief description
   - Technologies used (as tags)
   - Screenshot/image
   - Links to demo/GitHub
-- Modal window for detailed project view
+- Detailed project view option (either modal or separate page)
 
-### Achievements Section
-- Timeline layout showing progression
+### Achievements Page (pages/achievements.html)
+- Timeline layout showing progression of achievements
 - Visual icons representing achievement types
-- Brief descriptions with dates
+- Detailed descriptions with dates
 - Supporting images where applicable
+- Recognition and awards section
 
-### Certifications Section
-- Grid of certification logos/badges
-- Hover effect to show details
-- Verification links
-- Dates of certification
+### School Certifications Page (pages/school-certifications.html)
+- Academic degrees and diplomas section
+- University/college certifications listing
+- Specialized training programs
+- Academic achievements and honors
+- Graduation dates and institutions
+- Verification links where applicable
 
-### Blog/Articles Section
-- Latest 3-4 articles in card format
-- Featured article with larger display
-- Categories and tags
-- Reading time indicator
-- Link to full blog (if external)
+### Industry Certifications Page (pages/industry-certifications.html)
+- Professional certification cards with logos
+- Certification details including:
+  - Full certification name
+  - Issuing organization
+  - Date obtained and expiration
+  - Credential ID
+  - Verification link
+- Categorization by certification type or relevance
 
-### Testimonials Section
-- Carousel/slider format
-- Quote format with attribution
+### Blog/Articles Page (pages/blog.html)
+- Featured article with large image
+- Grid of article cards
+- Article categorization and filtering
+- Each article card includes:
+  - Title
+  - Brief excerpt
+  - Category tag
+  - Reading time
+  - Publication date
+- Option for full article view
+
+### Testimonials Page (pages/testimonials.html)
+- Testimonial cards with quotes
+- Author information and company
 - Profile images for testimonial providers
 - Company logos where applicable
+- Testimonial categorization by project type (optional)
 
-### Contact Section
+### Contact Page (pages/contact.html)
 - Contact form with validation
-- Direct email and phone options
-- Social media links with icons
+- Direct contact information
+- Social media links
 - Availability indicator
-- Location map (optional)
+- Location information (optional map)
+- Response time expectation
+
+## Shared Elements
+
+### Header
+- Logo/site name
+- Main navigation menu
+- Mobile menu toggle
+- Optional: dark/light mode toggle
 
 ### Footer
 - Copyright information
-- Social media links
 - Quick navigation links
-- Privacy policy link (optional)
+- Social media icons
 - Back to top button
+- Optional: newsletter signup
 
 ## Responsive Design Considerations
 - Mobile-first approach
-- Collapsible navigation menu for small screens
-- Flexible grid layouts that adapt to screen size
-- Optimized images for different devices
+- Breakpoints for tablet and desktop views
+- Collapsible navigation for small screens
+- Flexible grid layouts
 - Touch-friendly interactive elements
+- Optimized images for different screen sizes
 
-## Color Scheme
-- Primary: Dark blue (#0a192f) - Professional, security-focused
-- Secondary: Cyan (#64ffda) - For accents and highlights
-- Background: Dark gradient (#0a192f to #112240) - Modern tech feel
-- Text: Light gray (#e6f1ff) - High readability on dark backgrounds
-- Accent: Orange (#ff6b00) - For calls-to-action and important elements
+## Color Scheme and Typography
+- Same as original design:
+  - Primary: Dark blue (#0a192f)
+  - Secondary: Cyan (#64ffda)
+  - Background: Dark gradient
+  - Text: Light gray (#e6f1ff)
+  - Accent: Orange (#ff6b00)
+- Consistent typography across all pages
+- Responsive font sizing
 
-## Typography
-- Headings: Montserrat (sans-serif) - Modern and professional
-- Body text: Open Sans (sans-serif) - Highly readable
-- Code snippets: Fira Code (monospace) - Technical authenticity
-- Font sizes responsive to viewport width
+## Page Transitions
+- Smooth page transitions
+- Loading indicators for slower connections
+- Consistent scroll position management
+- Proper focus management for accessibility
