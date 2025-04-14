@@ -1,4 +1,4 @@
-// Main JavaScript for Cybersecurity Portfolio Multi-page Website
+// Main JavaScript for Website
 
 document.addEventListener('DOMContentLoaded', function() {
     // Update copyright year
@@ -207,6 +207,86 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    
+
+    // --- Project Details Modal Logic ---
+    const projectsGrid = document.querySelector('.projects-grid');
+    const modal = document.getElementById('project-details-modal');
+    const modalBody = modal ? modal.querySelector('.modal-body') : null;
+    const closeModalButton = modal ? modal.querySelector('.close-modal') : null;
+
+    if (projectsGrid && modal && modalBody && closeModalButton) {
+
+        // --- Event Listener for Detail Buttons (using event delegation) ---
+        projectsGrid.addEventListener('click', function(event) {
+            // Check if the clicked element is a details button or inside one
+            const detailsButton = event.target.closest('.project-details-btn');
+
+            if (detailsButton) {
+                event.preventDefault(); // Prevent any default button behavior
+
+                const projectId = detailsButton.getAttribute('data-project');
+                if (!projectId) {
+                    console.error('Details button is missing data-project attribute.');
+                    return;
+                }
+
+                const detailsContentElement = document.getElementById(`${projectId}-details`);
+                if (!detailsContentElement) {
+                    console.error(`Could not find details content element with ID: #${projectId}-details`);
+                    modalBody.innerHTML = '<p>Error: Project details not found.</p>'; // Show error in modal
+                    modal.classList.add('active'); // Still show modal to indicate an error
+                    document.body.classList.add('modal-open');
+                    return;
+                }
+
+                // --- Inject content and show modal ---
+                modalBody.innerHTML = detailsContentElement.innerHTML; // Copy the HTML content
+                modal.classList.add('active'); // Make the modal visible
+                document.body.classList.add('modal-open'); // Prevent body scroll
+            }
+        });
+
+        // --- Function to close the modal ---
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.classList.remove('modal-open');
+            // Clear content after fade out transition completes (match CSS transition duration)
+            setTimeout(() => {
+                 if (!modal.classList.contains('active')) { // Check if it wasn't reopened quickly
+                    modalBody.innerHTML = ''; // Clear the injected content
+                 }
+            }, 300); // Adjust timing based on your CSS modal fade-out duration
+        }
+
+        // --- Event Listener for Close Button ---
+        closeModalButton.addEventListener('click', closeModal);
+
+        // --- Event Listener for Clicking Modal Background ---
+        modal.addEventListener('click', function(event) {
+            // If the click is directly on the modal overlay (not children like modal-content)
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        // --- Event Listener for Escape Key ---
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' || event.key === 'Esc') {
+                if (modal.classList.contains('active')) {
+                    closeModal();
+                }
+            }
+        });
+
+    } else {
+        // Log error if essential elements are missing
+        if (!projectsGrid) console.error('Project grid container (.projects-grid) not found.');
+        if (!modal) console.error('Modal element (#project-details-modal) not found.');
+        if (!modalBody) console.error('Modal body element (.modal-body) not found inside the modal.');
+        if (!closeModalButton) console.error('Modal close button (.close-modal) not found inside the modal.');
+    }
+
     
     // Skills tab functionality
     const skillsTabs = document.querySelectorAll('.skills-tab');

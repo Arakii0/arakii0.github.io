@@ -10,15 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentImageIndexSpan = document.getElementById('currentImageIndex2');
     const totalImageCountSpan = document.getElementById('totalImageCount2');
 
-    // Define your image sources here
-    // IMPORTANT: Replace these with your actual image paths!
+    // Define image sources here
     const carouselImages = [
         '../images/TISC CTF 2023.jpg',
         '../images/TISC CTF 2024.jpg', 
         '../images/DownUnderCTF5 2024.jpg',
         '../images/YBNCTF 2024.jpg',
         '../images/THM_Hackfinity_2025.png',
-        // Add more image paths as needed
     ];
 
     let currentImageIndex = 0;
@@ -148,9 +146,6 @@ document.addEventListener('DOMContentLoaded', function() {
          if (carouselImages.length <= 1) {
              if(prevArrow) prevArrow.disabled = true;
              if(nextArrow) nextArrow.disabled = true;
-             // Maybe hide arrows entirely if only one image
-             // if(prevArrow) prevArrow.style.display = 'none';
-             // if(nextArrow) nextArrow.style.display = 'none';
          }
      } else if (carouselImages.length === 0) {
         // Handle case with no images
